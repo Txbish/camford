@@ -1,7 +1,19 @@
 import { NextResponse } from "next/server"
+interface Plan {
+  name: string;
+  price: number;
+  duration: string;
+  features: string[];
+}
 
-// Function to send email using SendGrid
-async function sendEmail(data: any) {
+interface EmailData {
+  name: string;
+  email: string;
+  phone: string;
+  plan: Plan;
+}
+
+async function sendEmail(data: EmailData) {
   try {
 const sendgridApiKey = process.env.SENDGRID_API_KEY;
 
@@ -91,7 +103,7 @@ export async function POST(request: Request) {
     try {
       await sendEmail(data)
       return NextResponse.json({ success: true })
-    } catch (error: any) {
+    } catch (error: unknown) {
       // Handle specific SendGrid errors
       if (error.message.includes("Sender email not verified")) {
         return NextResponse.json(
