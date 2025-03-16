@@ -104,19 +104,21 @@ export async function POST(request: Request) {
       await sendEmail(data)
       return NextResponse.json({ success: true })
     } catch (error: unknown) {
-      // Handle specific SendGrid errors
-      if (error.message.includes("Sender email not verified")) {
-        return NextResponse.json(
-          {
-            error: "Sender email not verified in SendGrid. Please verify your sender email before sending.",
-            details: "Visit https://sendgrid.com/docs/for-developers/sending-email/sender-identity/ for instructions.",
-          },
-          { status: 400 },
-        )
-      }
+  // Check if error is an object and has a message property
+  if (typeof error === "object" && error !== null && "message" in error) {
+    const errorMessage = (error as { message: string }).message;
 
-      throw error
+    if (errorMessage.includes("Sender email not verified")) {
+      return NextResponse.json({
+        error: "Sender email not verified in SendGrid. Please verify your sender email before sending.",
+      });
     }
+  }
+
+  // Handle other errors
+  return NextResponse.json({ error: "An unknown error occurred." });
+}
+
   } catch (error) {
     console.error("Error processing request:", error)
     return NextResponse.json(
