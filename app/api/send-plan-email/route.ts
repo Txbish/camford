@@ -3,7 +3,7 @@ import { NextResponse } from "next/server"
 // Function to send email using SendGrid
 async function sendEmail(data: any) {
   try {
-    const sendgridApiKey = "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"
+    const sendgridApiKey = process.env.SENDGRID_API_KEY
 
     if (!sendgridApiKey) {
       throw new Error("SendGrid API key not configured")
