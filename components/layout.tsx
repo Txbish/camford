@@ -1,21 +1,34 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import Link from "next/link"
-import { useState } from "react"
-import { ChevronDown, Menu, Twitter, Linkedin, Facebook, Github, AtSign } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Toaster } from "@/components/ui/toaster"
+import Link from "next/link";
+import { useState } from "react";
+import {
+  ChevronDown,
+  Menu,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Github,
+  AtSign,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Toaster } from "@/components/ui/toaster";
 
 interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -26,13 +39,22 @@ export default function Layout({ children }: LayoutProps) {
               <span className="text-2xl font-bold text-white">Logo</span>
             </Link>
             <nav className="hidden md:flex items-center gap-6">
-              <Link href="/" className="text-sm font-medium text-white hover:text-white/80">
+              <Link
+                href="/"
+                className="text-sm font-medium text-white hover:text-white/80"
+              >
                 Home
               </Link>
-              <Link href="/about" className="text-sm font-medium text-white hover:text-white/80">
+              <Link
+                href="/about"
+                className="text-sm font-medium text-white hover:text-white/80"
+              >
                 About us
               </Link>
-              <Link href="/tutors" className="text-sm font-medium text-white hover:text-white/80">
+              <Link
+                href="/tutors"
+                className="text-sm font-medium text-white hover:text-white/80"
+              >
                 Our Tutors
               </Link>
               <DropdownMenu>
@@ -43,17 +65,25 @@ export default function Layout({ children }: LayoutProps) {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start" className="w-48">
                   <DropdownMenuItem asChild>
-                    <Link href="/pricing/tuition">Cost of Tuition</Link>
+                    <Link href="/pricing">Pricing Plans</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/pricing/referral">Student Referral Scheme</Link>
+                    <Link href="/pricing/referral">
+                      Student Referral Scheme
+                    </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link href="/contact" className="text-sm font-medium text-white hover:text-white/80">
+              <Link
+                href="/contact"
+                className="text-sm font-medium text-white hover:text-white/80"
+              >
                 Contact us
               </Link>
-              <Link href="/faq" className="text-sm font-medium text-white hover:text-white/80">
+              <Link
+                href="/faq"
+                className="text-sm font-medium text-white hover:text-white/80"
+              >
                 FAQ's
               </Link>
             </nav>
@@ -66,37 +96,73 @@ export default function Layout({ children }: LayoutProps) {
             </Link>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="md:hidden">
-                <Button variant="outline" size="icon" className="bg-transparent border-0 text-white">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="bg-transparent border-0 text-white"
+                >
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col gap-4 mt-8">
-                  <Link href="/" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/"
+                    className="text-lg font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Home
                   </Link>
-                  <Link href="/about" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/about"
+                    className="text-lg font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
                     About us
                   </Link>
-                  <Link href="/tutors" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/tutors"
+                    className="text-lg font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Our Tutors
                   </Link>
                   <div className="flex flex-col gap-2 pl-4">
-                    <Link href="/pricing/tuition" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                    <Link
+                      href="/pricing/tuition"
+                      className="text-lg font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
                       Cost of Tuition
                     </Link>
-                    <Link href="/pricing/referral" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                    <Link
+                      href="/pricing/referral"
+                      className="text-lg font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
                       Student Referral Scheme
                     </Link>
                   </div>
-                  <Link href="/contact" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/contact"
+                    className="text-lg font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Contact us
                   </Link>
-                  <Link href="/faq" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/faq"
+                    className="text-lg font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
                     FAQ's
                   </Link>
-                  <Link href="/signup" className="mt-4" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/signup"
+                    className="mt-4"
+                    onClick={() => setIsOpen(false)}
+                  >
                     <Button className="w-full">Create free account</Button>
                   </Link>
                 </nav>
@@ -120,19 +186,34 @@ export default function Layout({ children }: LayoutProps) {
             <div className="grid gap-4">
               <div className="font-medium">Product</div>
               <nav className="grid gap-2">
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   Overview
                 </Link>
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   Features
                 </Link>
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   Solutions
                 </Link>
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   Tutorials
                 </Link>
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   Pricing
                 </Link>
               </nav>
@@ -140,19 +221,33 @@ export default function Layout({ children }: LayoutProps) {
             <div className="grid gap-4">
               <div className="font-medium">Company</div>
               <nav className="grid gap-2">
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   About us
                 </Link>
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   Careers
                 </Link>
                 <div className="flex items-center gap-2">
-                  <Link href="#" className="text-sm text-white/80 hover:text-white">
+                  <Link
+                    href="#"
+                    className="text-sm text-white/80 hover:text-white"
+                  >
                     Press
                   </Link>
-                  <span className="rounded-full bg-white px-2 py-0.5 text-xs font-medium text-primary">New</span>
+                  <span className="rounded-full bg-white px-2 py-0.5 text-xs font-medium text-primary">
+                    New
+                  </span>
                 </div>
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   News
                 </Link>
               </nav>
@@ -160,16 +255,28 @@ export default function Layout({ children }: LayoutProps) {
             <div className="grid gap-4">
               <div className="font-medium">Social</div>
               <nav className="grid gap-2">
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   Twitter
                 </Link>
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   LinkedIn
                 </Link>
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   GitHub
                 </Link>
-                <Link href="#" className="text-sm text-white/80 hover:text-white">
+                <Link
+                  href="#"
+                  className="text-sm text-white/80 hover:text-white"
+                >
                   Dribbble
                 </Link>
               </nav>
@@ -204,6 +311,5 @@ export default function Layout({ children }: LayoutProps) {
       </footer>
       <Toaster />
     </div>
-  )
+  );
 }
-
