@@ -1,9 +1,9 @@
-import Image from "next/image"
-import Link from "next/link"
-import Layout from "@/components/layout"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { BookOpen, Award, Users } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import Layout from "@/components/layout";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { BookOpen, Award, Users } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -14,14 +14,21 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold">
-                Welcome To <span className="text-secondary-foreground">Camford Tutors</span>,
+                Welcome To{" "}
+                <span className="text-secondary-foreground">
+                  Camford Tutors
+                </span>
+                ,
                 <br />
-                Where <span className="text-secondary-foreground">Learning</span> Meets{" "}
+                Where{" "}
+                <span className="text-secondary-foreground">Learning</span>{" "}
+                Meets{" "}
                 <span className="text-secondary-foreground">Excellence</span>!
               </h1>
               <p className="text-lg text-white/80">
-                At Camford Tutors, we are committed to helping students unlock their full academic potential through
-                personalized and effective tutoring.
+                At Camford Tutors, we are committed to helping students unlock
+                their full academic potential through personalized and effective
+                tutoring.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" variant="secondary">
@@ -56,12 +63,12 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px]">
+            <div className="relative h-[300px] md:h-[500px] lg:h-[600px]">
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/Homepage.webp"
                 alt="Tutor with laptop"
                 fill
-                className="object-contain"
+                className="object-contain rounded-3xl"
               />
             </div>
           </div>
@@ -71,38 +78,46 @@ export default function HomePage() {
       {/* What We Offer */}
       <section className="py-16 md:py-24">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">What We Offer</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            What We Offer
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 title: "Maths - GCSE, A-Level",
-                description: "Lessons on design that cover the most recent developments.",
+                description:
+                  "Lessons on design that cover the most recent developments.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
                 title: "English - GCSE, A-Level",
-                description: "Classes in development that cover the most recent advancements in web.",
+                description:
+                  "Classes in development that cover the most recent advancements in web.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
                 title: "Science - GCSE, A-Level",
-                description: "User Interface Design courses that cover the most recent trends.",
+                description:
+                  "User Interface Design courses that cover the most recent trends.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
                 title: "Exam Preparation - GCSE",
-                description: "Lessons on design that cover the most recent developments.",
+                description:
+                  "Lessons on design that cover the most recent developments.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
                 title: "Test Preparation - GCSE",
-                description: "Classes in development that cover the most recent advancements in web.",
+                description:
+                  "Classes in development that cover the most recent advancements in web.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
                 title: "Interview Preparation - Medicine, Dentistry",
-                description: "User Interface Design courses that cover the most recent trends.",
+                description:
+                  "User Interface Design courses that cover the most recent trends.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
             ].map((service, index) => (
@@ -112,8 +127,13 @@ export default function HomePage() {
                     {service.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <Link href="#" className="text-primary hover:underline inline-flex items-center">
+                  <p className="text-muted-foreground mb-4">
+                    {service.description}
+                  </p>
+                  <Link
+                    href="#"
+                    className="text-primary hover:underline inline-flex items-center"
+                  >
                     Learn More
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +158,9 @@ export default function HomePage() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Camford Tutors</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Choose Camford Tutors
+          </h2>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
@@ -146,23 +168,24 @@ export default function HomePage() {
                 title: "Experienced Tutors",
                 description:
                   "Our team consists of experienced educators from prestigious universities with in-depth knowledge of their subjects and a passion for teaching.",
-                image: "/placeholder.svg?height=150&width=150",
+                image: "/experiencedTutors.webp",
               },
               {
                 title: "Flexible Scheduling",
                 description: "We offer online sessions to fit your schedule.",
-                image: "/placeholder.svg?height=150&width=150",
+                image: "/flexibleScheduling.webp",
               },
               {
                 title: "Proven Track Record",
                 description:
                   "Our tutors have helped students achieve significant improvements in their academic performance.",
-                image: "/placeholder.svg?height=150&width=150",
+                image: "/trackRecord.webp",
               },
               {
                 title: "Supportive Environment",
-                description: "We foster a nurturing space where students feel motivated and confident to learn.",
-                image: "/placeholder.svg?height=150&width=150",
+                description:
+                  "We foster a nurturing space where students feel motivated and confident to learn.",
+                image: "/supportiveEnvironment.webp",
               },
             ].map((feature, index) => (
               <div key={index} className="text-center">
@@ -171,7 +194,7 @@ export default function HomePage() {
                     src={feature.image || "/placeholder.svg"}
                     alt={feature.title}
                     fill
-                    className="object-contain"
+                    className="object-cover mix-blend-multiply rounded-xl"
                   />
                 </div>
                 <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
@@ -185,19 +208,22 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="py-16 md:py-24">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Client Testimonials</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Client Testimonials
+          </h2>
 
-          <div className="relative h-[400px] w-full max-w-4xl mx-auto">
+          <div className="relative h-[400px] w-auto mx-auto">
             <Image
-              src="/placeholder.svg?height=400&width=800"
+              src="/mapTestimonial.svg"
               alt="World map with testimonials"
               fill
               className="object-contain"
             />
-            <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg max-w-[250px]">
-              <div className="font-semibold">Rocky Dixon</div>
-              <p className="text-sm text-muted-foreground">
-                "The features on monday.com make our team work faster and easier to organize"
+            <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg max-w-[350px]">
+              <div className="text-center font-semibold">Rocky Dixon</div>
+              <p className="text-sm text-center text-muted-foreground">
+                "The features on monday.com make our team work faster and easier
+                to organize"
               </p>
             </div>
           </div>
@@ -207,15 +233,18 @@ export default function HomePage() {
       {/* Blog Section */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Our recent blogs</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Our recent blogs
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Three Pillars of User Delight",
                 date: "November 15, 2014",
-                excerpt: "Delight can be experienced viscerally, behaviorally, and reflectively. A great design is...",
-                image: "/placeholder.svg?height=200&width=300",
+                excerpt:
+                  "Delight can be experienced viscerally, behaviorally, and reflectively. A great design is...",
+                image: "/ThreePillars.svg",
                 tags: ["Research", "UI UX"],
               },
               {
@@ -223,7 +252,7 @@ export default function HomePage() {
                 date: "September 24, 2017",
                 excerpt:
                   "Visual-design principles can be applied consistently throughout the process of creating a product UX map...",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/ui.svg",
                 tags: ["Research", "UI Design"],
               },
               {
@@ -231,21 +260,31 @@ export default function HomePage() {
                 date: "March 14, 2014",
                 excerpt:
                   "Agile methods aim to overcome usability barriers in traditional development, but pose new threats to user experience quality...",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/Agile.webp",
                 tags: ["Programming", "Research", "Development"],
               },
             ].map((blog, index) => (
               <Card key={index} className="overflow-hidden">
                 <div className="relative h-48 w-full">
-                  <Image src={blog.image || "/placeholder.svg"} alt={blog.title} fill className="object-cover" />
+                  <Image
+                    src={blog.image || "/placeholder.svg"}
+                    alt={blog.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <CardContent className="p-6">
-                  <div className="text-sm text-muted-foreground mb-2">{blog.date}</div>
+                  <div className="text-sm text-muted-foreground mb-2">
+                    {blog.date}
+                  </div>
                   <h3 className="text-lg font-bold mb-2">{blog.title}</h3>
                   <p className="text-muted-foreground mb-4">{blog.excerpt}</p>
                   <div className="flex flex-wrap gap-2">
                     {blog.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="text-xs px-2 py-1 bg-primary/10 text-primary rounded">
+                      <span
+                        key={tagIndex}
+                        className="text-xs px-2 py-1 bg-primary/10 text-primary rounded"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -257,6 +296,5 @@ export default function HomePage() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }
-
