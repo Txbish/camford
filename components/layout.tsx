@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -36,8 +36,17 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-white">Logo</span>
+              <Image
+                src="/camford-logo.svg"
+                alt="Logo"
+                width={70} // Increased size
+                height={70} // Increased size
+                priority
+                className="object-contain sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 -mr-2" // Adjusted margin
+              />
+              <span className="text-white text-xl font-bold">Camford</span>
             </Link>
+
             <nav className="hidden md:flex items-center gap-6">
               <Link
                 href="/"
@@ -90,8 +99,8 @@ export default function Layout({ children }: LayoutProps) {
           </div>
           <div className="flex items-center gap-4">
             <Link href="/signup" className="hidden md:block">
-              <Button variant="secondary" size="sm">
-                Create free account
+              <Button variant="ghost" className="bg-blue-400" size="sm">
+                Create Account
               </Button>
             </Link>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -176,9 +185,23 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container py-12 md:py-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="flex flex-col gap-2">
-              <Link href="/" className="text-2xl font-bold">
-                Logo
+              <Link
+                href="/"
+                className="flex items-center justify-center text-2xl font-bold gap-2"
+              >
+                <Image
+                  src="/camford-logo.svg"
+                  alt="Logo"
+                  width={100} // Increased size
+                  height={100} // Increased size
+                  priority
+                  className="object-cover sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" // Responsive sizing
+                />
+                <span className="flex items-center justify-center">
+                  Camford
+                </span>
               </Link>
+
               <p className="text-sm text-white/80 mt-2">
                 Top learning experiences that create more talent in the world.
               </p>

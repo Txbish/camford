@@ -21,10 +21,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold">
-                About{" "}
-                <span className="text-secondary-foreground">
-                  Camford Tutors
-                </span>
+                About <span className="text-blue-500">Camford Tutors</span>
               </h1>
               <p className="text-lg text-white/90">
                 At Camford Tutors, we are committed to helping students reach

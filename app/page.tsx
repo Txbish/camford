@@ -14,16 +14,11 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold">
-                Welcome To{" "}
-                <span className="text-secondary-foreground">
-                  Camford Tutors
-                </span>
+                Welcome To <span className="text-blue-500">Camford Tutors</span>
                 ,
                 <br />
-                Where{" "}
-                <span className="text-secondary-foreground">Learning</span>{" "}
-                Meets{" "}
-                <span className="text-secondary-foreground">Excellence</span>!
+                Where <span className="text-blue-500">Learning</span> Meets{" "}
+                <span className="text-blue-500">Excellence</span>!
               </h1>
               <p className="text-lg text-white/80">
                 At Camford Tutors, we are committed to helping students unlock
