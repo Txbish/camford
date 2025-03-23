@@ -60,10 +60,10 @@ export default function HomePage() {
             </div>
             <div className="relative h-[300px] md:h-[500px] lg:h-[600px]">
               <Image
-                src="/Homepage.webp"
+                src="/Guywithbag.png"
                 alt="Tutor with laptop"
                 fill
-                className="object-contain rounded-3xl"
+                className="object-contain rounded-3x1"
               />
             </div>
           </div>

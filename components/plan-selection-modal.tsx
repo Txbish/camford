@@ -20,23 +20,20 @@ import { Loader2 } from "lucide-react";
 
 // Define the plan types
 interface Feature {
-  name: string;
-  included: boolean;
+  label: string;
+  price?: string;
 }
 
-interface Plan {
-  id: string;
-  name: string;
+interface PricingCardProps {
+  unit: string;
+  title: string;
   description: string;
-  price: number;
-  duration: string;
   features: Feature[];
-  popular?: boolean;
-  discount?: number;
+  buttonText: string;
 }
 
 interface PlanSelectionModalProps {
-  plan: Plan;
+  plan: PricingCardProps;
   isOpen: boolean;
   onClose: () => void;
 }
@@ -76,11 +73,12 @@ export default function PlanSelectionModal({
         email: data.email,
         phone: data.phone,
         plan: {
-          id: plan.id,
-          name: plan.name,
-          price: plan.price,
-          duration: plan.duration,
-          features: plan.features.filter((f) => f.included).map((f) => f.name),
+          title: plan.title,
+          unit: plan.unit,
+          features: plan.features.map((feature) => ({
+            label: feature.label,
+            price: feature.price,
+          })),
         },
       });
 
@@ -95,13 +93,12 @@ export default function PlanSelectionModal({
           email: data.email,
           phone: data.phone,
           plan: {
-            id: plan.id,
-            name: plan.name,
-            price: plan.price,
-            duration: plan.duration,
-            features: plan.features
-              .filter((f) => f.included)
-              .map((f) => f.name),
+            title: plan.title,
+            unit: plan.unit,
+            features: plan.features.map((feature) => ({
+              label: feature.label,
+              price: feature.price,
+            })),
           },
         }),
       });
@@ -139,11 +136,9 @@ export default function PlanSelectionModal({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Subscribe to {plan.name}</DialogTitle>
+          <DialogTitle>Subscribe to {plan.title}</DialogTitle>
           <DialogDescription>
-            Fill out the form below to subscribe to the {plan.name} at $
-            {plan.price}
-            {plan.duration}.
+            Fill out the form below to subscribe to the {plan.title} plan.
           </DialogDescription>
         </DialogHeader>
 
