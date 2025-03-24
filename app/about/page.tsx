@@ -52,37 +52,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Features Section */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-16">Our Features</h2>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
-                alt="Interactive learning workspace visualization"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold">
-                Manage everything in one workspace
-              </h3>
-              <p className="text-lg text-muted-foreground">
-                Planning, tracking and delivering your team's best work has
-                never been easier. An integrated workspace that's simple to use.
-                TeamFlow lets you spend less time managing your work and more
-                time actually doing it.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Our Story Section */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container">
@@ -102,10 +71,10 @@ export default function AboutPage() {
 
             <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                src="/cambridge.webp"
                 alt="Professional tutor with digital learning tools"
                 fill
-                className="object-cover"
+                className="object-contain mix-blend-multiply"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
