@@ -131,4 +131,3 @@ export default function SignUpPage() {
     </Layout>
   );
 }
-// Test for the above code

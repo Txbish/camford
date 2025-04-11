@@ -61,12 +61,12 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[300px] md:h-[500px] lg:h-[600px]">
+            <div className="relative h-[300px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden">
               <Image
-                src="/Guywithbag.png"
+                src="/Happy-Man.jpg"
                 alt="Tutor with laptop"
                 fill
-                className="object-contain rounded-3x1"
+                className="object-contain rounded-3xl"
               />
             </div>
           </div>
