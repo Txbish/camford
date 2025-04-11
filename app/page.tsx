@@ -177,7 +177,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      /* {/* Testimonials */}
       <section className="py-16 md:py-24">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12">
