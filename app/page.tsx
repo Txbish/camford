@@ -69,7 +69,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* What We Offer */}
       <section className="py-16 md:py-24">
         <div className="container">
@@ -82,37 +81,35 @@ export default function HomePage() {
               {
                 title: "Maths - GCSE, A-Level",
                 description:
-                  "Lessons on design that cover the most recent developments.",
+                  "Expert one-on-one tutoring for GCSE & A-Level Maths, focused on building confidence and exam success.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
                 title: "English - GCSE, A-Level",
-                description:
-                  "Classes in development that cover the most recent advancements in web.",
+                description: "Literature, Writing, Grammar and Comprehension.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
                 title: "Science - GCSE, A-Level",
-                description:
-                  "User Interface Design courses that cover the most recent trends.",
+                description: "Biology, Chemistry and Physics.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
-                title: "Exam Preparation - GCSE",
+                title: "Exam Preparation - GCSE, A-Level",
                 description:
-                  "Lessons on design that cover the most recent developments.",
+                  "Focused and effective exam preparation for GCSE & A-Level to boost performance and confidence.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
-                title: "Test Preparation - GCSE",
+                title: "Test Preparation - UCAT",
                 description:
-                  "Classes in development that cover the most recent advancements in web.",
+                  "Targeted UCAT test preparation to improve speed, strategy, and score.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
               {
                 title: "Interview Preparation - Medicine, Dentistry",
                 description:
-                  "User Interface Design courses that cover the most recent trends.",
+                  "Tailored interview coaching for Medicine and Dentistry to help you stand out with confidence.",
                 icon: <BookOpen className="h-6 w-6 text-white" />,
               },
             ].map((service, index) => (
@@ -125,31 +122,12 @@ export default function HomePage() {
                   <p className="text-muted-foreground mb-4">
                     {service.description}
                   </p>
-                  <Link
-                    href="#"
-                    className="text-primary hover:underline inline-flex items-center"
-                  >
-                    Learn More
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 ml-1"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Link>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container">
@@ -199,8 +177,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
+      /* {/* Testimonials */}
       <section className="py-16 md:py-24">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12">
@@ -224,8 +201,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Blog Section */}
+      */ /* {/* Blog Section */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12">
@@ -290,6 +266,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      */
     </Layout>
   );
 }
