@@ -32,7 +32,7 @@ const plans: PricingCardProps[] = [
     unit: "/hour",
     title: "A-Level All Subjects",
     description:
-      "Expert guidance for A-Level subjects to excel in exams and coursework. Get personalized support with 1-to-1 classes or learn together in group sessions.",
+      "Expert guidance for A-Level subjects to excel in exams and coursework. Get personalised support with 1-to-1 classes or learn together in group sessions.",
     features: [
       { label: "Online 1-to-1 Class", price: "£35/hr" },
       { label: "Block bookings of 10 or more lessons", price: "£30/hr" },

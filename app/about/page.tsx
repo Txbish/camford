@@ -21,11 +21,11 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold">
-                About <span className="text-blue-500">Camford Tutors</span>
+                About <span className="text-yellow-500">Camford Tutors</span>
               </h1>
               <p className="text-lg text-white/90">
                 At Camford Tutors, we are committed to helping students reach
-                their full academic potential through personalized and effective
+                their full academic potential through personalised and effective
                 tutoring. Whether you need assistance with specific school
                 subjects, preparing for exams, or working on specific learning
                 goals, we provide tailored tuition services that ensure your
@@ -34,13 +34,13 @@ export default function AboutPage() {
               </p>
               <div>
                 <Button size="lg" variant="secondary">
-                  Get Started
+                  <a href="/pricing">Get Started</a>
                 </Button>
               </div>
             </div>
             <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=%3D%3D&auto=&fit=crop&w=1200&q=80"
                 alt="Tutor helping a student with coursework"
                 fill
                 priority
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 tuition to students of all ages and academic levels. Our
                 founders, a group of passionate educators from top universities
                 including Cambridge and Oxford, recognized the need for
-                accessible, individualized learning experiences. Over the years,
+                accessible, individualised learning experiences. Over the years,
                 we've helped students improve their grades, master new skills,
                 and reach their academic goals.
               </p>
@@ -99,14 +99,14 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold">Personalized Attention</h2>
+              <h2 className="text-3xl font-bold">Personalised Attention</h2>
               <p className="text-lg text-primary font-medium">
                 One-on-one tutoring tailored to individual needs.
               </p>
               <p className="text-lg text-muted-foreground">
-                We believe that every student deserves personalized attention to
+                We believe that every student deserves personalised attention to
                 address their specific learning needs. Our one-on-one tutoring
-                approach ensures that each student receives customized
+                approach ensures that each student receives customised
                 instruction that targets their unique challenges and builds on
                 their strengths.
               </p>
@@ -125,7 +125,7 @@ export default function AboutPage() {
               <p className="text-lg text-muted-foreground">
                 At Camford Tutors, we believe that every student is unique, and
                 so are their learning needs. That's why we focus on creating
-                customized learning plans for each student, designed to meet
+                customised learning plans for each student, designed to meet
                 their specific challenges and goals. We understand that the
                 conventional classroom approach doesn't work for everyone, so we
                 take a more personalized approach, and our dedicated tutors work
@@ -134,14 +134,14 @@ export default function AboutPage() {
               </p>
 
               <div className="space-y-4 mt-8">
-                <h3 className="text-xl font-bold">We emphasize:</h3>
+                <h3 className="text-xl font-bold">We emphasise:</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <div className="mr-3 mt-1 h-5 w-5 text-primary">
                       <Target className="h-5 w-5" />
                     </div>
                     <span>
-                      <strong>Personalized Attention:</strong> One-on-one
+                      <strong>Personalised Attention:</strong> One-on-one
                       tutoring tailored to individual needs.
                     </span>
                   </li>
@@ -300,12 +300,12 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg text-muted-foreground">
               Join Camford Tutors today and experience the difference that
-              personalized, expert tutoring can make in your academic journey.
+              personalised, expert tutoring can make in your academic journey.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg">Get Started</Button>
               <Button size="lg" variant="outline">
-                Contact Us
+                <a href="/contact">Contact us </a>{" "}
               </Button>
             </div>
           </div>

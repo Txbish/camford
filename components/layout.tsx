@@ -99,7 +99,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
           <div className="flex items-center gap-4">
             <Link href="/signup" className="hidden md:block">
-              <Button variant="ghost" className="bg-blue-400" size="sm">
+              <Button variant="ghost" className="bg-yellow-400" size="sm">
                 Create Account
               </Button>
             </Link>
@@ -225,16 +225,10 @@ export default function Layout({ children }: LayoutProps) {
                   href="#"
                   className="text-sm text-white/80 hover:text-white"
                 >
-                  Solutions
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-white/80 hover:text-white"
-                >
                   Tutorials
                 </Link>
                 <Link
-                  href="#"
+                  href="/pricing"
                   className="text-sm text-white/80 hover:text-white"
                 >
                   Pricing
@@ -245,7 +239,7 @@ export default function Layout({ children }: LayoutProps) {
               <div className="font-medium">Company</div>
               <nav className="grid gap-2">
                 <Link
-                  href="#"
+                  href="/about"
                   className="text-sm text-white/80 hover:text-white"
                 >
                   About us
@@ -258,10 +252,10 @@ export default function Layout({ children }: LayoutProps) {
                 </Link>
                 <div className="flex items-center gap-2">
                   <Link
-                    href="#"
+                    href="contact"
                     className="text-sm text-white/80 hover:text-white"
                   >
-                    Press
+                    Contact Us
                   </Link>
                   <span className="rounded-full bg-white px-2 py-0.5 text-xs font-medium text-primary">
                     New
