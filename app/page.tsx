@@ -29,16 +29,11 @@ export default function HomePage() {
                 tutoring.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" variant="secondary">
-                  Get Started
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-transparent text-white border-white hover:bg-white/10"
-                >
-                  Get free trial
-                </Button>
+                <Link href="/pricing">
+                  <Button size="lg" variant="secondary">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
               <div className="flex flex-wrap gap-6 pt-4">
                 <div className="flex items-center gap-2">
