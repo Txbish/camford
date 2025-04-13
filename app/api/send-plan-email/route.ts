@@ -102,6 +102,7 @@ export async function POST(request: Request) {
     // Send the email
     try {
       await sendEmail(data)
+      console.log(data);
       return NextResponse.json({ success: true })
     } catch (error: unknown) {
   // Check if error is an object and has a message property

@@ -98,11 +98,11 @@ export default function Layout({ children }: LayoutProps) {
             </nav>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/signup" className="hidden md:block">
+            {/* <Link href="/signup" className="hidden md:block">
               <Button variant="ghost" className="bg-yellow-400" size="sm">
                 Create Account
               </Button>
-            </Link>
+            </Link> */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="md:hidden">
                 <Button
