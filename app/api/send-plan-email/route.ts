@@ -21,15 +21,12 @@ const sendgridApiKey = process.env.SENDGRID_API_KEY;
       throw new Error("SendGrid API key not configured")
     }
 
-    // IMPORTANT: This email address MUST be verified in your SendGrid account
-    // Go to https://app.sendgrid.com/settings/sender_auth to verify a sender
     const verifiedSenderEmail = "syedmustafaali689@gmail.com" // Replace with your verified sender email
 
-    // Create the email payload for SendGrid
     const payload = {
   personalizations: [
     {
-      to: [{ email: "i221111@nu.edu.pk" }], // Replace with your admin email
+      to: [{ email: "contact@camfordtutors.co.uk" }], 
       subject: `New Plan Subscription: ${data.plan.title}`,
     },
   ],
