@@ -74,6 +74,7 @@ export default function PlanSelectionModal({
         phone: data.phone,
         plan: {
           title: plan.title,
+          description: plan.description,
           unit: plan.unit,
           features: plan.features.map((feature) => ({
             label: feature.label,
@@ -94,6 +95,7 @@ export default function PlanSelectionModal({
           phone: data.phone,
           plan: {
             title: plan.title,
+            description: plan.description,
             unit: plan.unit,
             features: plan.features.map((feature) => ({
               label: feature.label,

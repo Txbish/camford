@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server"
 interface Plan {
-  name: string;
-  price: number;
-  duration: string;
-  features: string[];
+    unit: string;
+  title: string;
+  description: string;
+  features: { label: string; price?: string }[];
 }
 
 interface EmailData {
@@ -27,35 +27,39 @@ const sendgridApiKey = process.env.SENDGRID_API_KEY;
 
     // Create the email payload for SendGrid
     const payload = {
-      personalizations: [
-        {
-          to: [{ email: "i221111@nu.edu.pk" }], // Replace with your admin email
-          subject: `New Plan Subscription: ${data.plan.name}`,
-        },
-      ],
-      from: {
-        email: verifiedSenderEmail,
-        name: "Camford Tutors",
-      },
-      content: [
-        {
-          type: "text/html",
-          value: `
-            <h1>New Plan Subscription</h1>
-            <p><strong>Customer:</strong> ${data.name}</p>
-            <p><strong>Email:</strong> ${data.email}</p>
-            <p><strong>Phone:</strong> ${data.phone}</p>
-            <h2>Plan Details</h2>
-            <p><strong>Plan:</strong> ${data.plan.name}</p>
-            <p><strong>Price:</strong> $${data.plan.price}${data.plan.duration}</p>
-            <h3>Features:</h3>
-            <ul>
-              ${data.plan.features.map((feature: string) => `<li>${feature}</li>`).join("")}
-            </ul>
-          `,
-        },
-      ],
-    }
+  personalizations: [
+    {
+      to: [{ email: "i221111@nu.edu.pk" }], // Replace with your admin email
+      subject: `New Plan Subscription: ${data.plan.title}`,
+    },
+  ],
+  from: {
+    email: verifiedSenderEmail,
+    name: "Camford Tutors",
+  },
+  content: [
+    {
+      type: "text/html",
+      value: `
+        <h1>New Plan Subscription</h1>
+        <p><strong>Customer:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <h2>Plan Details</h2>
+        <p><strong>Plan:</strong> ${data.plan.title}</p>
+        <p><strong>Description:</strong> ${data.plan.description}</p>
+        <h3>Features:</h3>
+        <ul>
+          ${data.plan.features.map((feature: { label: string; price?: string }) => 
+            `<li><strong>${feature.label}:</strong> ${feature.price ? feature.price : "Price not available"}</li>`
+          ).join('')}
+        </ul>
+      `,
+    },
+  ],
+}
+
+
 
     console.log("Sending email with SendGrid...")
 
