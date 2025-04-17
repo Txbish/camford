@@ -201,7 +201,7 @@ export default function Layout({ children }: LayoutProps) {
                   className="object-cover sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" // Responsive sizing
                 />
                 <span className="flex items-center justify-center">
-                  Camford
+                  Camford Tutors
                 </span>
               </Link>
 
