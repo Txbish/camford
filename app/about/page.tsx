@@ -303,9 +303,14 @@ export default function AboutPage() {
               personalised, expert tutoring can make in your academic journey.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg">Get Started</Button>
+              <Button size="lg">
+                <a></a>
+              </Button>
+              <Button size="lg">
+                <a href="/pricing">Get Started</a>
+              </Button>
               <Button size="lg" variant="outline">
-                <a href="/contact">Contact us </a>{" "}
+                <a href="/contact">Contact us </a>
               </Button>
             </div>
           </div>

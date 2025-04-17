@@ -122,7 +122,7 @@ export default function ContactPage() {
                   <div>
                     <h2 className="text-xl font-semibold mb-2">Contact Info</h2>
                     <p className="text-muted-foreground">
-                      Phone: +92 300 1234567
+                      Phone: +44 7910 071398
                       <br />
                       Email: contact@camfordtutors.com
                     </p>
