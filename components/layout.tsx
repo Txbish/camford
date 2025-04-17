@@ -291,7 +291,7 @@ export default function Layout({ children }: LayoutProps) {
                   href="#"
                   className="text-sm text-white/80 hover:text-white"
                 >
-                  GitHub
+                  Tiktok
                 </Link>
                 <Link
                   href="#"
