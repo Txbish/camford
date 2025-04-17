@@ -190,7 +190,7 @@ export default function Layout({ children }: LayoutProps) {
             <div className="flex flex-col gap-2">
               <Link
                 href="/"
-                className="flex items-center justify-start text-2xl font-bold gap-2"
+                className="flex items-center justify-start text-2xl font-bold"
               >
                 <Image
                   src="/camford-logo.svg"
