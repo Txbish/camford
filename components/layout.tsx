@@ -185,12 +185,12 @@ export default function Layout({ children }: LayoutProps) {
       </header>
       <main className="flex-1">{children}</main>
       <footer className="border-t bg-primary text-white">
-        <div className="container py-12 md:py-16">
+        <div className="w-full px-4 md:px-8 py-12 md:py-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="flex flex-col gap-2">
               <Link
                 href="/"
-                className="flex items-center justify-center text-2xl font-bold gap-2"
+                className="flex items-center justify-start text-2xl font-bold gap-2"
               >
                 <Image
                   src="/camford-logo.svg"
