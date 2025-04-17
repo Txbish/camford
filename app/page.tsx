@@ -10,7 +10,7 @@ export default function HomePage() {
     <Layout>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary to-primary-600 text-white">
-        <div className="container py-16 md:py-24">
+        <div className="container py-8 md:py-12">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold">

@@ -13,6 +13,7 @@ import {
   Github,
   AtSign,
 } from "lucide-react";
+import { RiTiktokFill } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -33,7 +34,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-primary">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="w-full px-4 md:px-8  flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center">
               <Image
@@ -44,7 +45,9 @@ export default function Layout({ children }: LayoutProps) {
                 priority
                 className="object-contain sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 -mr-2" // Adjusted margin
               />
-              <span className="text-white text-xl font-bold">Camford</span>
+              <span className="text-white text-xl font-bold">
+                Camford Tutors
+              </span>
             </Link>
 
             <nav className="hidden md:flex items-center gap-6">
@@ -321,6 +324,10 @@ export default function Layout({ children }: LayoutProps) {
               <Link href="#" className="text-white/60 hover:text-white">
                 <AtSign className="h-5 w-5" />
                 <span className="sr-only">Email</span>
+              </Link>
+              <Link href="#" className="text-white/60 hover:text-white">
+                <RiTiktokFill className="h-5 w-5" />
+                <span className="sr-only">TikTok</span>
               </Link>
             </div>
           </div>
