@@ -93,13 +93,14 @@ export default function PricingPage() {
               key={plan.title}
               className="flex flex-col transition-transform transform hover:scale-105 hover:shadow-2xl hover:border-primary rounded-2xl border border-gray-200 shadow-lg"
             >
-              <CardHeader className="bg-gradient-to-r from-blue-500 to-indigo-600 p-4 rounded-t-2xl text-white">
+              <CardHeader className="bg-gradient-to-r from-blue-500 to-indigo-600 p-4 rounded-t-2xl text-white h-40">
                 <CardTitle className="text-xl font-semibold">
                   {plan.title}
                 </CardTitle>
                 <p className="text-sm text-gray-100 mt-1">{plan.description}</p>
               </CardHeader>
-              <CardContent className="flex-grow p-6 bg-white rounded-b-2xl">
+
+              <CardContent className="flex-grow p-6 bg-white rounded-b-2xl flex flex-col justify-between">
                 <div className="mt-4 space-y-3">
                   {plan.features.map((feature, index) => (
                     <div key={index} className="flex items-center">
@@ -113,6 +114,8 @@ export default function PricingPage() {
                     </div>
                   ))}
                 </div>
+
+                {/* Button aligned at the bottom */}
                 <Button
                   className="w-full mt-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
                   onClick={() => handleSelectPlan(plan)}
