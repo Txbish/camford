@@ -304,9 +304,6 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg">
-                <a></a>
-              </Button>
-              <Button size="lg">
                 <a href="/pricing">Get Started</a>
               </Button>
               <Button size="lg" variant="outline">
