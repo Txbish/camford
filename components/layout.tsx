@@ -205,18 +205,18 @@ export default function Layout({ children }: LayoutProps) {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={handleWhatsAppClick}
-          className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse"
           size="icon"
         >
           <MessageCircle className="h-6 w-6 text-white" />
           <span className="sr-only">Contact us on WhatsApp</span>
         </Button>
-        <div className="absolute -top-2 -right-2 h-4 w-4 bg-red-500 rounded-full"></div>
+        <div className="absolute -top-2 -right-2 h-4 w-4 bg-red-500 rounded-full animate-ping"></div>
       </div>
 
       <footer className="border-t bg-primary text-white">
         {/* ...existing code... */}
-        <div className="w-full px-4 md:px-8 py-12 md:py-16">
+        <div className="w-full px-4 md:px-8 pt-12 pb-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="flex flex-col gap-2">
               <Link
