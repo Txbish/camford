@@ -12,6 +12,7 @@ import {
   Facebook,
   Github,
   AtSign,
+  MessageCircle,
 } from "lucide-react";
 import { RiTiktokFill } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
@@ -31,8 +32,23 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // WhatsApp configuration
+  const whatsappNumber = "+923008101542"; // Replace with your actual WhatsApp number
+  const defaultMessage =
+    "Hello! I'm interested in learning more about Camford Tutors.";
+
+  const handleWhatsAppClick = () => {
+    const encodedMessage = encodeURIComponent(defaultMessage);
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(
+      "+",
+      ""
+    )}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
+      {/* ...existing code... */}
       <header className="sticky top-0 z-50 w-full border-b bg-primary">
         <div className="w-full px-4 md:px-8  flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
@@ -184,7 +200,22 @@ export default function Layout({ children }: LayoutProps) {
         </div>
       </header>
       <main className="flex-1">{children}</main>
+
+      {/* WhatsApp Widget */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button
+          onClick={handleWhatsAppClick}
+          className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          size="icon"
+        >
+          <MessageCircle className="h-6 w-6 text-white" />
+          <span className="sr-only">Contact us on WhatsApp</span>
+        </Button>
+        <div className="absolute -top-2 -right-2 h-4 w-4 bg-red-500 rounded-full"></div>
+      </div>
+
       <footer className="border-t bg-primary text-white">
+        {/* ...existing code... */}
         <div className="w-full px-4 md:px-8 py-12 md:py-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="flex flex-col gap-2">
