@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 import { Loader2 } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea"; // ✅ Make sure this is imported
 
 // Define the plan types
 interface Feature {
@@ -38,11 +39,12 @@ interface PlanSelectionModalProps {
   onClose: () => void;
 }
 
-// Form validation schema
+// ✅ Updated form schema to include message
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
   phone: z.string().min(10, { message: "Please enter a valid phone number" }),
+  message: z.string().optional(),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -69,9 +71,7 @@ export default function PlanSelectionModal({
 
     try {
       console.log("Submitting form data:", {
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
+        ...data,
         plan: {
           title: plan.title,
           description: plan.description,
@@ -83,16 +83,13 @@ export default function PlanSelectionModal({
         },
       });
 
-      // Send the form data to the server
       const response = await fetch("/api/send-plan-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
+          ...data,
           plan: {
             title: plan.title,
             description: plan.description,
@@ -176,13 +173,23 @@ export default function PlanSelectionModal({
             <Label htmlFor="phone">Phone Number</Label>
             <Input
               id="phone"
-              placeholder="+1 (555) 123-4567"
+              placeholder="+44 7910 071398 "
               {...register("phone")}
               className={errors.phone ? "border-red-500" : ""}
             />
             {errors.phone && (
               <p className="text-sm text-red-500">{errors.phone.message}</p>
             )}
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="message">Add a comment</Label>
+            <Textarea
+              id="message"
+              placeholder="Write your message here (optional)"
+              {...register("message")}
+              className="min-h-[100px]"
+            />
           </div>
 
           <DialogFooter className="pt-4">
