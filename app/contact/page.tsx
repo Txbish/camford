@@ -99,7 +99,7 @@ export default function ContactPage() {
                       {loading ? "Sending..." : "Send"}
                     </Button>
                     {responseMessage && (
-                      <p className="text-sm text-center mt-2 text-muted-foreground">
+                      <p className="text-sm text-center mt-2 font-bold text-blue-600">
                         {responseMessage}
                       </p>
                     )}
@@ -108,17 +108,6 @@ export default function ContactPage() {
 
                 {/* Right Side - Contact Info */}
                 <div className="space-y-6">
-                  {/* <div>
-                    <h2 className="text-xl font-semibold mb-2">Our Office</h2>
-                    <p className="text-muted-foreground">
-                      Camford Tutors
-                      <br />
-                      B 37/3 Ground Floor, Double Road,
-                      <br />
-                      Garden Town, Lahore, Pakistan
-                    </p>
-                  </div> */}
-
                   <div>
                     <h2 className="text-xl font-semibold mb-2">Contact Info</h2>
                     <p className="text-muted-foreground">
